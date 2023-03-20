@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pizza Constructor</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo"><a href="index.html">LA CARAVANA</a></div>
+      <nav class="nav">
+        <ul class="list">
+          <li class="list__item">
+            <a class="list__link" href="index.html">HOME</a>
+          </li>
+
+          <li class="list__item">
+            <a class="list__link" href="index.html#about">ABOUT US</a>
+          </li>
+          <li class="list__item">
+            <a class="list__link" href="construct.html">CONSTRUCT PIZZA</a>
+          </li>
+          <li class="list__item">
+            <a class="list__link" href="#contact">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__burger">
+        <span></span>
+      </div>
+    </header>
+
+    <main class="const-main">
+      <section>
+        <h2 class="const-main__title title">CONSTRACT YOUR PIZZA</h2>
+
+        <h3 class="size">SIZE:</h3>
+        <form id="pizza">
+          <label class="radio"
+            ><input
+              type="radio"
+              class="radioIn"
+              id="small"
+              name="size"
+              value="small"
+            /><span class="fakeRadio"></span><span>Little</span></label
+          >
+          <label class="radio"
+            ><input
+              type="radio"
+              class="radioIn"
+              id="mid"
+              name="size"
+              value="mid"
+            /><span class="fakeRadio"></span><span>Medium</span></label
+          >
+          <label class="radio"
+            ><input
+              type="radio"
+              class="radioIn"
+              id="big"
+              name="size"
+              value="big"
+            /><span class="fakeRadio"></span><span>Big</span></label
+          >
+        </form>
+
+        <div class="table-wrapper">
+          <div id="piZZa" class="table">
+            <img
+              class="table__pizza"
+              src="../src/klassicheskij-bortik_1556622914630.png"
+              alt="Classic"
+            />
+          </div>
+
+          <div class="ingridients">
+            <h3 class="ingridients__title">Sauces:</h3>
+
+            <div id="boxClassic">
+              <img
+                draggable="true"
+                class="draggable"
+                id="sauceClassic"
+                src="../src/sous-klassicheskij_1557758736353.png"
+                alt="Ketchup"
+                data-key="sauce"
+              />
+              <span>Ketchup</span>
+            </div>
+            <div id="boxBBQ">
+              <img
+                draggable="true"
+                class="draggable"
+                id="sauceBBQ"
+                src="../src/sous-bbq_155679418013.png"
+                alt="BBQ"
+                data-key="sauce"
+              />
+              <span>BBQ</span>
+            </div>
+            <div id="boxRiKotta">
+              <img
+                draggable="true"
+                class="draggable"
+                id="sauceRikotta"
+                src="../src/sous-rikotta_1556623391103.png"
+                alt="Ricotta"
+                data-key="sauce"
+              />
+              <span>Ricotta</span>
+            </div>
+
+            <h3>Toppings:</h3>
+            <div id="box_obichniy">
+              <img
+                draggable="true"
+                class="draggable"
+                id="moc1"
+                src="../src/mocarela_1556623220308.png"
+                alt="Cheese"
+                data-key="topping"
+              />
+              <span>Cheese</span>
+            </div>
+            <div id="box_feta">
+              <img
+                draggable="true"
+                class="draggable"
+                id="moc2"
+                src="../src/mocarela_1556785182818.png"
+                alt="Feta"
+                data-key="topping"
+              />
+              <span>Feta</span>
+            </div>
+            <div id="box_mozarella">
+              <img
+                draggable="true"
+                class="draggable"
+                id="moc3"
+                src="../src/mocarela_1556785198489.png"
+                alt="Mocarella"
+                data-key="topping"
+              />
+              <span>Mocarella</span>
+            </div>
+            <div id="box_telya">
+              <img
+                draggable="true"
+                class="draggable"
+                id="telya"
+                src="../src/telyatina_1556624025747.png"
+                alt="Beef"
+                data-key="topping"
+              />
+              <span>Beef</span>
+            </div>
+            <div id="box_tomato">
+              <img
+                draggable="true"
+                class="draggable"
+                id="vetch1"
+                src="../src/vetchina.png"
+                alt="Tomato"
+                data-key="topping"
+              />
+              <span>Tomato</span>
+            </div>
+            <div id="box_mashroms">
+              <img
+                draggable="true"
+                class="draggable"
+                id="vetch2"
+                src="../src/vetchina_1556623556129.png"
+                alt="Mashrooms"
+                data-key="topping"
+              />
+              <span>Mashrooms</span>
+            </div>
+          </div>
+        </div>
+        <div class="result">
+          <div class="price">
+            <p>Price: <span id="show_price" class="show_price">0 UAH</span></p>
+          </div>
+          <div class="sauces">
+            <p>Sauces: <span id="show_sauces" class="show_sauces"></span></p>
+          </div>
+          <div class="topings">
+            <p>
+              Toppings: <span id="show_topings" class="show_topings"></span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="const-order">
+        <div id="banner">
+          Get a discount 30%!<br /><button id="getBtn">Get</button>
+        </div>
+        <h2 class="const-order__title title">Confirm the order</h2>
+
+        <form class="data" name="info" method="POST" action="./php/mail.php">
+          <div class="grid">
+            <label for="name">Your name</label>
+            <input id="userName" placeholder="Name" name="name" type="text" />
+            <label for="phone">Telephone number</label>
+            <input
+              id="userPhone"
+              placeholder="+380505050500"
+              name="phone"
+              type="tel"
+            />
+            <label for="email">E-mail</label>
+            <input
+              id="userEmail"
+              placeholder="email@email.com"
+              name="email"
+              type="email"
+            />
+            <input
+              id="btnCancel"
+              class="constr-button"
+              name="cancel"
+              type="reset"
+              value="CLEAR"
+            />
+            <input
+              id="submit"
+              class="constr-button"
+              name="btnSubmit"
+              type="submit"
+              value="CONFIRM >>"
+            />
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__pizza"></div>
+      <div class="social" id="contact">
+        <a
+          class="social__link social__link_facebook"
+          href="https://www.facebook.com/"
+          target="_blank"
+        ></a>
+        <a
+          class="social__link social__link_twitter"
+          href="https://www.twitter.com/"
+          target="_blank"
+        ></a>
+        <a
+          class="social__link social__link_instagram"
+          href="https://www.instagram.com/"
+          target="_blank"
+        ></a>
+      </div>
+      <h1 class="footer__title">LA CARAVANA</h1>
+      <div class="copyright">
+        TODOS LOS DERECHOS RESERVADOS © LA CARAVANA 2021 | DESIGN: MEZORA
+      </div>
+    </footer>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/js.js"></script>
+    <script src="./js/burger.js"></script>
+  </body>
+</html>

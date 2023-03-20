@@ -1,0 +1,382 @@
+:root {
+  --main: #1c46cf;
+  --sub: #00db25;
+  --dark: #10004b;
+}
+
+.wrapper {
+  display: flex;
+  width: inherit;
+  padding: 0 10%;
+  box-shadow: 1px 1px 15px 0 #eee;
+}
+
+.const-main {
+  color: black;
+
+  &__title {
+    padding-top: 120px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 2vw !important;
+    font-size: 40px;
+
+    &::after {
+      left: 50% !important;
+      margin-left: -55%;
+      top: 110% !important;
+    }
+  }
+}
+
+#pizza {
+  @media (max-width: 600px) {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+#pizza span {
+  font-size: 20px;
+}
+
+.size {
+  margin: 4vw auto 4vw;
+}
+
+#banner {
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(50deg, white, #eee);
+  box-shadow: 2px 2px 5px #999;
+  padding: 0.8vw 1.1vw;
+  color: var(--dark);
+  border-radius: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  z-index: 3;
+  animation: padd 0.5s ease infinite;
+}
+
+@keyframes padd {
+  50% {
+    padding: 0.9vw 1.2vw;
+  }
+}
+
+#banner button {
+  background: linear-gradient(50deg, red, #c40000);
+  padding: 15px 50px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: white;
+}
+
+h3 {
+  width: 80%;
+  text-align: center;
+  margin: 1em;
+  text-transform: uppercase;
+}
+
+.table-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+form {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  opacity: 0;
+}
+
+.fakeRadio {
+  display: inline-block;
+  border: 3px var(--main) solid;
+  border-radius: 50%;
+  height: 1em;
+  width: 1em;
+  position: relative;
+  margin-right: 0.5em;
+  top: 0.3em;
+}
+
+.fakeRadio::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 0.6em;
+  width: 0.6em;
+  background-color: var(--main);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.2;
+  transition: ease-in-out 0.3s;
+}
+
+.radioIn:checked + .fakeRadio::before {
+  opacity: 1;
+}
+
+.table,
+.ingridients {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.table {
+  position: relative;
+  margin-right: 20px;
+}
+
+.hovered {
+  background: #f9f9f9;
+  border: 2px dashed var(--main);
+  border-radius: 10px;
+}
+
+.table > img {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.ingridients span {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.result {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  padding: 3em;
+}
+
+.table-wrapper div img {
+  width: 100%;
+}
+
+.ingridients div {
+  display: inline-block;
+  width: 30%;
+}
+
+.ingridients div img {
+  height: 100px;
+}
+
+.ingridients span {
+  display: block;
+  text-align: center;
+}
+
+.const-order {
+  background: black;
+  padding: 60px 10% 40px;
+  position: relative;
+
+  &__title {
+    margin: 15vw auto;
+
+    &::after {
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      margin: 30vw auto;
+    }
+  }
+}
+
+.const-order label {
+  color: #fff;
+}
+
+.const-order input {
+  padding: 15px;
+  width: fit-content;
+  margin: 1em;
+  border-radius: 10px;
+  border: none;
+  font-size: 24px;
+}
+
+.success {
+  border: 2px green solid !important;
+}
+
+.error {
+  border: 2px red solid !important;
+}
+
+.constr-button {
+  width: fit-content !important;
+  font-size: 18px !important;
+  background: linear-gradient(50deg, red, #d60000);
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.constr-button:last-child {
+  background: linear-gradient(30deg, var(--sub), #00740a);
+  height: 50px;
+  width: 350px;
+}
+
+address {
+  text-align: center;
+  margin-top: 40px;
+  color: white;
+}
+
+.x {
+  margin-left: 8px;
+  padding: 2px 7px;
+  border: none;
+  background-color: red;
+  font-weight: 900;
+  font-size: 1.1em;
+  color: white;
+  border-radius: 50%;
+  box-shadow: 1px 1px 3px 0 #aaa;
+}
+
+p.element {
+  text-transform: none;
+  display: inline-block;
+  font-size: 1.2em;
+}
+
+.div {
+  margin: 1em;
+}
+
+.const-order > h2,
+.const-order > sub {
+  color: white;
+  text-align: center;
+}
+
+.const-order > h2 {
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.const-order > form > div > label,
+input[name="cancel"] {
+  justify-self: right;
+  margin: 1em;
+}
+
+.const-order > form > div > p {
+  grid-column: 2/3;
+  justify-self: left;
+  padding-left: 1.2em;
+  font-size: 0.8em;
+  margin-top: -12px;
+  text-transform: none;
+  color: red;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    display: block;
+    text-align: center;
+  }
+
+  .table-wrapper {
+    display: block;
+    text-align: center;
+    padding-top: 80px;
+  }
+
+  .ingridients {
+    &__title {
+      margin-top: 15vw;
+    }
+  }
+
+  .ingridients,
+  .table {
+    width: 100%;
+  }
+
+  .table {
+    margin: 100px 0;
+  }
+
+  label {
+    display: block;
+  }
+
+  .grid {
+    grid-template-columns: 100%;
+  }
+
+  .grid > input,
+  input.constr-button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 5%;
+  }
+
+  .const-order > form > div > label,
+  input[name="cancel"],
+  .const-order > form > div > p {
+    justify-self: center;
+    margin: 10px 0;
+  }
+
+  .const-order > form > div > input[name="btnSubmit"] {
+    width: 100% !important;
+  }
+
+  .result {
+    display: block;
+    padding: 30px 0 0;
+    text-align: center;
+  }
+
+  .data {
+    box-sizing: content-box;
+    font-size: 12px;
+
+    &input {
+      padding: 10px;
+      font-size: 12px;
+    }
+  }
+}
