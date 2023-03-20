@@ -45,7 +45,7 @@
 
 #banner {
   position: absolute;
-  top: 2%;
+  top: 4vw;
   left: 50%;
   transform: translateX(-50%);
   background: linear-gradient(50deg, white, #eee);
@@ -74,6 +74,10 @@
   font-size: 0.8em;
   font-weight: bold;
   color: white;
+}
+#banner button:hover {
+  cursor: pointer;
+  filter: brightness(1.2);
 }
 
 h3 {
@@ -182,10 +186,6 @@ input[type=checkbox] {
   width: 30%;
 }
 
-.ingridients div img {
-  height: 100px;
-}
-
 .ingridients span {
   display: block;
   text-align: center;
@@ -204,7 +204,7 @@ input[type=checkbox] {
 }
 @media (max-width: 600px) {
   .const-order__title {
-    margin: 30vw auto;
+    margin: 25vw auto;
   }
 }
 
@@ -238,6 +238,10 @@ input[type=checkbox] {
   text-transform: uppercase;
   font-weight: 600;
   border-radius: 10px;
+}
+.constr-button:hover {
+  cursor: pointer;
+  filter: brightness(1.2);
 }
 
 .constr-button:last-child {
